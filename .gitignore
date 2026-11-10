@@ -3,3 +3,8 @@ node_modules
 out
 .DS_Store
 .env*
+
+# Phase 3 image backups (original PNG assets; kept out of the production bundle)
+_originals/
+.tmp-*
+*.tsbuildinfo
