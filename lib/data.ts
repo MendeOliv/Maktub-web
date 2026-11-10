@@ -1,0 +1,12 @@
+export type Product = { id:string; slug:string; name:string; category:string; type:'Venda'|'Aluguer'|'Venda e aluguer'; price?:number; rentalPrice?:number; sizes:string[]; available:boolean; featured:boolean; image:string; description:string; kind:'dress'|'accessory' };
+export const seedProducts: Product[] = [
+{id:'d1',slug:'aurora-real',name:'Aurora Real',category:'Vestido princesa',type:'Aluguer',rentalPrice:185000,sizes:['36','38','40','42'],available:true,featured:true,image:'/brand/maktub-poster.jpg',description:'Silhueta princesa com corpete trabalhado e uma presença luminosa para o grande dia.',kind:'dress'},
+{id:'d2',slug:'essencia',name:'Essência',category:'Vestido clássico',type:'Venda e aluguer',price:420000,rentalPrice:220000,sizes:['38','40','42'],available:true,featured:true,image:'/brand/maktub-poster.jpg',description:'Linhas clássicas, renda delicada e uma cauda que celebra cada passo.',kind:'dress'},
+{id:'d3',slug:'luz-de-luanda',name:'Luz de Luanda',category:'Vestido sereia',type:'Aluguer',rentalPrice:195000,sizes:['36','38','40'],available:true,featured:true,image:'/brand/maktub-poster.jpg',description:'Um desenho escultural para uma noiva que quer entrar na sala com confiança.',kind:'dress'},
+{id:'a1',slug:'coroa-imperial',name:'Coroa Imperial',category:'Coroas',type:'Aluguer',rentalPrice:35000,sizes:['Único'],available:true,featured:false,image:'/brand/maktub-logo.jpg',description:'Uma coroa dourada para completar o look com brilho e delicadeza.',kind:'accessory'},
+{id:'a2',slug:'veu-champagne',name:'Véu Champagne',category:'Véus',type:'Venda e aluguer',price:78000,rentalPrice:40000,sizes:['Único'],available:true,featured:false,image:'/brand/maktub-poster.jpg',description:'Véu leve com acabamento suave, pensado para combinar com diferentes silhuetas.',kind:'accessory'},
+{id:'a3',slug:'tiara-serena',name:'Tiara Serena',category:'Tiaras',type:'Venda',price:65000,sizes:['Único'],available:true,featured:false,image:'/brand/maktub-logo.jpg',description:'Acento luminoso e elegante para um penteado inesquecível.',kind:'accessory'}
+];
+export function getProducts(): Product[] { return seedProducts; }
+export function formatKz(value?:number){ return value ? new Intl.NumberFormat('pt-AO',{style:'currency',currency:'AOA',maximumFractionDigits:0}).format(value).replace('AOA','Kz') : 'Preço sob consulta'; }
+export function whatsapp(message:string){ return `https://wa.me/244946760994?text=${encodeURIComponent(message)}`; }

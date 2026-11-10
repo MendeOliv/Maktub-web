@@ -1,0 +1,2 @@
+'use client'; import {useEffect,useState} from 'react'; import {readImage} from '@/lib/storage';
+export function StoredImage({src,alt}:{src:string;alt:string}){const [resolved,setResolved]=useState(src);useEffect(()=>{let active=true;let objectUrl='';readImage(src).then(value=>{if(active){objectUrl=value;setResolved(value)}});return()=>{active=false;if(objectUrl.startsWith('blob:'))URL.revokeObjectURL(objectUrl)}},[src]);return <img src={resolved} alt={alt}/>}

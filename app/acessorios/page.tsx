@@ -1,0 +1,2 @@
+import {Header,Footer} from '@/components/SiteChrome'; import {LocalProductGrid} from '@/components/LocalProductGrid';
+export default function Accessories(){return <><Header/><main className="container"><div className="page-intro"><span className="eyebrow">Os detalhes</span><h1>O brilho está nos detalhes.</h1><p>Coroas, tiaras e véus selecionados para completar a sua imagem com leveza e personalidade.</p></div><div style={{paddingBottom:100}}><LocalProductGrid kind="accessory"/></div></main><Footer/></>}

@@ -1,0 +1,1 @@
+{"routes":[{"path":"/","title":"MAKTUB Atelier de Noivas"},{"path":"/vestidos","title":"Vestidos"},{"path":"/vestidos/:slug","title":"Detalhe do vestido"},{"path":"/acessorios","title":"Acessórios"},{"path":"/sobre","title":"Sobre a MAKTUB"},{"path":"/contactos","title":"Contactos"},{"path":"/admin","title":"Dashboard administrativo"}]}
